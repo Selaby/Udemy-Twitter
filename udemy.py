@@ -44,5 +44,16 @@ api = tweepy.API(auth)
 # print(user.followers_count)
 
 # 自動ツイート
-# api.update_status("テスト投稿です。")
-api.update_with_media(status="テスト投稿です。", filename="1.jpg")
+# api.update_status("テスト")
+# api.update_with_media(status="テスト。", filename="1.jpg")
+
+# 自動いいねとリツイート（tweet_idは）
+# tweet_id = "1443132650084986881"
+# api.create_favorite(tweet_id)
+# api.retweet(tweet_id)
+
+# 検索した投稿全てにいいねを付ける
+# posts = api.search(q="Python", count=30)
+# for post in posts:
+#     tweet_id = post.id
+#     api.create_favorite(tweet_id)
